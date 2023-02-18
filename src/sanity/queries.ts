@@ -26,3 +26,9 @@ export const NOT_FOUND_PAGE_DATA_QUERY = groq`
         title
     }
 `;
+
+export const PAGE_PATHS_QUERY = groq`
+  *[_type == 'page' && defined(slug.current)]{
+    'slug': slug.current,
+  }
+`;

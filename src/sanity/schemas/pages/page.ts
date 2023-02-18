@@ -1,16 +1,24 @@
-import { HomeIcon } from "@sanity/icons";
+import { DocumentIcon } from "@sanity/icons";
 import { defineField, defineType, isRecord, isString } from "sanity";
+
 import { previewSecretId } from "@/sanity/constants";
 import { apiVersion } from "@/sanity/env";
 import { getSecret } from "@/sanity/secret";
+import { PagePreview } from "@/sanity/preview/PagePreview";
 
-export const home = defineType({
+export const page = defineType({
   type: "document",
-  name: "home",
-  title: "Home",
-  icon: HomeIcon,
+  name: "page",
+  title: "Page",
+  icon: DocumentIcon,
 
   options: {
+    views(S) {
+      return [
+        S.view.form().title("Content"),
+        S.view.component(PagePreview).title("Preview"),
+      ];
+    },
     async url(ctx) {
       const { _id: id, _type: type, slug } = ctx.document;
       const currentSlug =
@@ -44,9 +52,28 @@ export const home = defineType({
     defineField({
       type: "string",
       name: "title",
-      title: "Title for internal reference",
+      title: "Title for menu & links",
       description:
-        "This won't show up for users, just make sure you add a descriptive name which will make it easy to find this page later when adding link or searching & browsing the CMS.",
+        "just make sure you add a descriptive name which will make it easy to find this page later when adding link & browsing the CMS. Example (About us).",
+    }),
+    defineField({
+      type: "slug",
+      name: "slug",
+      title: "Relative address on the website",
+      description: "Defines the URL of the page in the website. Example (test)",
+      options: {
+        source: "title",
+        maxLength: 200, // will be ignored if slugify is set
+        slugify: (input) =>
+          input.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
+      },
+    }),
+    defineField({
+      title: "Unlisted",
+      description: "If unlisted is true then it wont show on up google search.",
+      name: "indexPage",
+      type: "boolean",
+      initialValue: false,
     }),
     defineField({
       title: "Title for SEO",
