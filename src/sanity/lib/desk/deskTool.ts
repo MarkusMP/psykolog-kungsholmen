@@ -1,5 +1,12 @@
 import { PagePreview } from "@/sanity/preview/PagePreview";
-import { DocumentIcon, HomeIcon, MenuIcon, UploadIcon } from "@sanity/icons";
+import {
+  DocumentIcon,
+  ErrorOutlineIcon,
+  HomeIcon,
+  MenuIcon,
+  UnknownIcon,
+  UploadIcon,
+} from "@sanity/icons";
 import { definePlugin, DocumentOptions, DocumentPluginOptions } from "sanity";
 import { deskTool as baseDeskTool } from "sanity/desk";
 import { DefaultDocumentNodeResolver } from "sanity/desk";
@@ -37,6 +44,18 @@ export const deskTool = definePlugin(() => {
                 .title(`pages documents`)
                 .schemaType("page")
                 .filter('_type == "page"')
+            ),
+          S.listItem()
+            .title("404 Page")
+            .icon(ErrorOutlineIcon)
+            .child(
+              S.document()
+                .schemaType("notFound")
+                .documentId("notFound")
+                .views([
+                  S.view.form().title("Content"),
+                  S.view.component(PagePreview).title("Preview"),
+                ])
             ),
           S.divider(),
           S.listItem()

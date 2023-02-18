@@ -1,8 +1,7 @@
 import { SchemaTypeDefinition } from "sanity";
 import { footer, header } from "./global";
-import { home } from "./pages";
-import { page } from "./pages/page";
+import { home, page, notFound } from "./pages";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [home, footer, header, page],
+  types: [home, footer, header, page, notFound],
 };

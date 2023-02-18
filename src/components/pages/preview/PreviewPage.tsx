@@ -11,16 +11,10 @@ import {
 interface IProps {
   slug: string | null;
   token: string | null;
-  locale?: string;
   canonical?: string | null;
 }
 
-export default function PreviewPage({
-  slug,
-  token,
-  locale,
-  canonical,
-}: IProps) {
+export default function PreviewPage({ slug, token, canonical }: IProps) {
   return (
     <PageScreen
       data={usePreview(
@@ -32,16 +26,11 @@ export default function PreviewPage({
           : PAGE_DATA_QUERY,
         {
           slug: slug,
-          language: locale,
         }
       )}
       canonical={canonical}
-      header={usePreview(token, HEADER_QUERY, {
-        language: locale,
-      })}
-      footer={usePreview(token, FOOTER_QUERY, {
-        language: locale,
-      })}
+      header={usePreview(token, HEADER_QUERY)}
+      footer={usePreview(token, FOOTER_QUERY)}
     />
   );
 }

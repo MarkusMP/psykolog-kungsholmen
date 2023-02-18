@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@next/font": "13.1.6",
@@ -21,6 +22,7 @@
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",
     "next-sanity": "^4.1.3",
+    "next-sitemap": "^3.1.52",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sanity": "^3.3.1",
