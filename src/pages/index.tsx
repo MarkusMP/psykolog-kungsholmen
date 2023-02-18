@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps<
     };
   }
 
-  const data = await client.fetch(HOME_PAGE_DATA_QUERY);
+  const data = await client.fetch<IPageData | null>(HOME_PAGE_DATA_QUERY);
 
   if (!data) {
     notFound();

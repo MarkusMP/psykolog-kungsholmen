@@ -13,17 +13,26 @@ export const FOOTER_QUERY = groq`
 
 export const HOME_PAGE_DATA_QUERY = groq`
     *[_type == 'home'][0]{
-        title
+        title,
+        titleSEO,
+        descriptionSEO,
+        ogImage,
     }
 `;
 export const PAGE_DATA_QUERY = groq`
-    *[_type == 'page'][0]{
-        title
+    *[_type == 'page' && slug.current == $slug][0]{
+        title,
+        titleSEO,
+        descriptionSEO,
+        ogImage,
     }
 `;
 export const NOT_FOUND_PAGE_DATA_QUERY = groq`
     *[_type == 'notFound'][0]{
-        title
+        title,
+        titleSEO,
+        descriptionSEO,
+        ogImage,
     }
 `;
 

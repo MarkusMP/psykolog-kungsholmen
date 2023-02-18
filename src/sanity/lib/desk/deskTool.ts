@@ -38,6 +38,7 @@ export const deskTool = definePlugin(() => {
                 .schemaType("page")
                 .filter('_type == "page"')
             ),
+          S.divider(),
           S.listItem()
             .title("Header")
             .icon(MenuIcon)

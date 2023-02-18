@@ -63,7 +63,6 @@ export const getStaticProps: GetStaticProps<
     `{
     "header": ${HEADER_QUERY},
     "footer": ${FOOTER_QUERY},
-
   }`
   );
 
@@ -73,7 +72,6 @@ export const getStaticProps: GetStaticProps<
       preview,
       slug: params?.slug || null,
       token: null,
-
       header,
       footer,
     },
@@ -90,8 +88,6 @@ export const getStaticPaths = async () => {
     pages.map((el: any) => {
       return paths.push({ params: { slug: `${el.slug}` } });
     });
-
-  console.log(paths);
 
   return {
     paths,
