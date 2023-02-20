@@ -1,6 +1,6 @@
 import Layout from "@/components/global/Layout";
 import { SiteMeta } from "@/components/global/SiteMeta";
-// import RenderSections from '../components/RenderSections'
+import RenderSections from "@/components/pages/RenderSections";
 import { urlForImage } from "@/sanity/lib/image";
 import { IFooterPayload, IHeaderPayload, IPageData } from "@/types";
 
@@ -28,8 +28,7 @@ export function PageScreen(props: IProps) {
         canonical={canonical}
       />
       <Layout header={header} footer={footer}>
-        <h1>{data?.title}</h1>
-        {/* {data?.content && <RenderSections sections={data.content} />} */}
+        {data?.content && <RenderSections sections={data.content} />}
       </Layout>
     </>
   );

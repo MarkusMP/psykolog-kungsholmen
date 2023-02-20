@@ -15,6 +15,12 @@ export const HOME_PAGE_DATA_QUERY = groq`
         titleSEO,
         descriptionSEO,
         ogImage,
+        content[]{
+            ...,
+            link-> {
+                "slug": slug.current,
+            },
+        }
     }
 `;
 export const PAGE_DATA_QUERY = groq`
@@ -24,6 +30,12 @@ export const PAGE_DATA_QUERY = groq`
         titleSEO,
         descriptionSEO,
         ogImage,
+        content[]{
+            ...,
+            link-> {
+                "slug": slug.current,
+            },
+        }
     }
 `;
 export const NOT_FOUND_PAGE_DATA_QUERY = groq`
@@ -32,6 +44,12 @@ export const NOT_FOUND_PAGE_DATA_QUERY = groq`
         titleSEO,
         descriptionSEO,
         ogImage,
+        content[]{
+            ...,
+            link-> {
+                "slug": slug.current,
+            },
+        }
     }
 `;
 export const PAGE_PATHS_QUERY = groq`
