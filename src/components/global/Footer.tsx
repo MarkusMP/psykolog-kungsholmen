@@ -12,7 +12,6 @@ interface IProps {
 const Footer = ({
   data: { copyright, description, image, info, menuItems },
 }: IProps) => {
-  console.log(menuItems);
   const imageUrl = image && urlForImage(image as any)?.url();
   return (
     <footer className="bg-white w-full">
@@ -54,7 +53,7 @@ const Footer = ({
           {menuItems &&
             menuItems.map((item) => (
               <div key={item._key} className="max-w-fit">
-                <h2 className="text-primary font-semibold montserrat">
+                <h2 className="text-primary font-bold montserrat">
                   {item.title && item.title}
                 </h2>
                 <ul className="pt-4">

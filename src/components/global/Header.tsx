@@ -87,14 +87,14 @@ const Header = ({ data: { image, menuItems } }: IProps) => {
                 {item._type === "home" ? (
                   <Link
                     href={"/"}
-                    className="montserrat text-dark inline-block group font-semibold pb-2 lg:pb-0 lg:ml-4"
+                    className="montserrat text-dark inline-block group font-medium pb-2 lg:pb-0 lg:ml-4"
                   >
                     {item.title && item.title}
                     <div className="w-0 h-[2px] bg-transparent group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                   </Link>
                 ) : item._type === "page" ? (
                   <Link
-                    className="montserrat text-dark inline-block group font-semibold lg:ml-4 pb-2 lg:pb-0"
+                    className="montserrat text-dark inline-block group font-medium lg:ml-4 pb-2 lg:pb-0"
                     href={`/${item.slug}`}
                   >
                     {item.title && item.title}
