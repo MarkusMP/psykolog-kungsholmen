@@ -38,4 +38,22 @@ export interface ILinkItemPayload {
   _type?: string;
 }
 
-export interface IFooterPayload {}
+export interface IFooterPayload {
+  copyright?: string;
+  description?: string;
+  image?: Image;
+  info?: IFooterInfoItemPayload[];
+  menuItems?: IFooterMenuItemPayload[];
+}
+
+export interface IFooterInfoItemPayload {
+  _key: string;
+  infoList: string;
+  text: string;
+}
+
+export interface IFooterMenuItemPayload {
+  title?: string;
+  _key?: string;
+  linkItems?: ILinkItemPayload[];
+}

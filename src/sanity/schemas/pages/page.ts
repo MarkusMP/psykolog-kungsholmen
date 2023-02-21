@@ -75,7 +75,8 @@ export const page = defineType({
       },
       options: {
         source: "title",
-        slugify: (slugString) => slugString.toLowerCase(),
+        slugify: (input) =>
+          input.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
         maxLength: 200,
       },
     }),

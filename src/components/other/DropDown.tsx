@@ -14,11 +14,11 @@ const DropDown = ({ items, title }: IProps) => {
   return (
     <Menu as="div" className="relative inline-block text-left lg:ml-4">
       <div>
-        <Menu.Button className="inline-block group font-medium w-full pb-2 lg:pb-0 justify-center montserrat text-primary focus:outline-none">
+        <Menu.Button className="inline-block group w-full pb-2 lg:pb-0 justify-center montserrat font-semibold text-dark focus:outline-none">
           <span className="flex items-center text-left">
             {title && title} <IoIosArrowDown className="ml-1 text-xl" />
           </span>
-          <div className="w-0 h-[2px] bg-transparent group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+          <div className="w-0 h-[2px] bg-transparent group-hover:w-full group-hover:bg-dark transition-all duration-500"></div>
         </Menu.Button>
       </div>
       <Transition
@@ -38,7 +38,7 @@ const DropDown = ({ items, title }: IProps) => {
                   <Link
                     href={!item.slug ? "/" : `/${item.slug}`}
                     className={
-                      "group w-full mb-[2px] lg:mb-0 pb-2 lg:px-2 lg:py-2 font-medium montserrat text-primary group inline-block text-left"
+                      "group w-full mb-[2px] lg:mb-0 pb-2 lg:px-2 lg:py-2 montserrat font-semibold text-dark group inline-block text-left"
                     }
                   >
                     {item.title && item.title}

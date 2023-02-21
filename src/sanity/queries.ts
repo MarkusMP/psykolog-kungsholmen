@@ -17,7 +17,20 @@ export const HEADER_QUERY = groq`
 `;
 export const FOOTER_QUERY = groq`
     *[_type == 'footer'][0]{
-        title
+        image,
+        copyright,
+        description,
+        info[],
+        menuItems[] {
+            _key,
+            title,
+            linkItems[]-> {
+                "slug": slug.current,
+                title,
+                _id,
+                _type
+            }
+        }
     }
 `;
 export const HOME_PAGE_DATA_QUERY = groq`
