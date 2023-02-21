@@ -1,7 +1,18 @@
 import { groq } from "next-sanity";
 export const HEADER_QUERY = groq`
     *[_type == 'header'][0]{
-        title
+        image,
+        menuItems[]-> {
+            _id,
+            _type, 
+            "slug": slug.current,
+            title,
+            linkItems[]-> {
+                "slug": slug.current,
+                title,
+                _id,
+            }
+        }
     }
 `;
 export const FOOTER_QUERY = groq`

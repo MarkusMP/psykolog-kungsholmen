@@ -18,5 +18,24 @@ export interface IPageData {
   ogImage?: Image;
 }
 
-export interface IHeaderPayload {}
+export interface IHeaderPayload {
+  image?: Image;
+  menuItems?: IMenuItemPayload[];
+}
+
+export interface IMenuItemPayload {
+  slug: string;
+  title?: string;
+  _id?: string;
+  _type?: string;
+  linkItems?: ILinkItemPayload[];
+}
+
+export interface ILinkItemPayload {
+  slug: string;
+  title?: string;
+  _id?: string;
+  _type?: string;
+}
+
 export interface IFooterPayload {}
