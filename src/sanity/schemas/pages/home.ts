@@ -19,7 +19,7 @@ export const home = defineType({
   icon: HomeIcon,
 
   options: {
-    async url(ctx) {
+    async url(ctx: any) {
       const { _id: id, _type: type, slug } = ctx.document;
       const currentSlug =
         isRecord(slug) && isString(slug.current) ? slug.current : undefined;

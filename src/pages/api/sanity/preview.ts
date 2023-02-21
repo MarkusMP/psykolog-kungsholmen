@@ -54,6 +54,12 @@ const handler: NextApiHandler = async function preview(req, res) {
     res.end();
     return;
   }
+  if (type === "notFound") {
+    res.setPreviewData({ token: readToken });
+    res.writeHead(307, { Location: `/404` });
+    res.end();
+    return;
+  }
 
   res.status(404);
   res.end();

@@ -20,7 +20,7 @@ export const notFound = defineType({
   icon: ErrorOutlineIcon,
 
   options: {
-    async url(ctx) {
+    async url(ctx: any) {
       const { _id: id, _type: type, slug } = ctx.document;
       const currentSlug =
         isRecord(slug) && isString(slug.current) ? slug.current : "/404";

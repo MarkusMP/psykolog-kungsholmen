@@ -1,51 +1,21 @@
-import { useEffect, useState } from "react";
-import { Stack, Text, Card } from "@sanity/ui";
-import { ErrorOutlineIcon } from "@sanity/icons";
+import { Box, Flex, Text } from "@sanity/ui";
+import React from "react";
 
-export const SlugInputField = (props: any) => {
-  const [error, setError] = useState(false);
-  const {
-    description,
-    title,
-    onChange,
-    validation,
-    validationError,
-    ...restProps
-  } = props;
-  useEffect(() => {
-    if (!restProps.inputProps.value) {
-      setError(true);
-    } else setError(false);
-  }, [restProps.inputProps.value]);
-
+export const SlugInput = (props: any) => {
   return (
-    <Card>
-      <Stack space={3} paddingBottom={4}>
-        <Text size={1} style={{ display: "flex" }} weight={"medium"}>
-          {title}
-          {error && (
-            <ErrorOutlineIcon style={{ marginLeft: "2px", color: "#c33529" }} />
-          )}
-        </Text>
-        {description && (
-          <Text size={1} style={{ color: "#6E7683", marginTop: "-2px" }}>
-            {description}
-          </Text>
-        )}
-        <Text style={{ paddingTop: "12px" }}>
-          <li
-            style={{
-              listStyle: "inside",
-              color: "#6E7683",
-              fontSize: "13px",
-            }}
-          >
-            💡 {`Don't`} include spaces or special characters, only lower-case
-            letters, number and hyphens
-          </li>
-        </Text>
-      </Stack>
-      {props.renderDefault(restProps)}
-    </Card>
+    <Flex style={{ alignItems: "center" }}>
+      <Text
+        style={{
+          paddingRight: "0.4em",
+          fontSize: "13px",
+          color: "#6E7683",
+        }}
+      >
+        psykologkungsholmen.se/
+      </Text>
+      <Box style={{ flex: 1 }}>{props.renderDefault({ ...props })}</Box>
+    </Flex>
   );
 };
+
+export default SlugInput;

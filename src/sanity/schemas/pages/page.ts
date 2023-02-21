@@ -12,7 +12,8 @@ import {
   CustomFieldDescription,
   InputCounterDescription,
 } from "@/sanity/components/InputCounterDescription";
-import { SlugInputField } from "@/sanity/components/slugInput";
+import { SlugInputField } from "@/sanity/components/slugInputField";
+import SlugInput from "@/sanity/components/slugInput";
 
 export const page = defineType({
   type: "document",
@@ -27,7 +28,7 @@ export const page = defineType({
         S.view.component(PagePreview).title("Preview"),
       ];
     },
-    async url(ctx) {
+    async url(ctx: any) {
       const { _id: id, _type: type, slug } = ctx.document;
       const currentSlug =
         isRecord(slug) && isString(slug.current) ? slug.current : undefined;
@@ -72,6 +73,7 @@ export const page = defineType({
 
       components: {
         field: SlugInputField,
+        input: SlugInput,
       },
       options: {
         source: "title",
@@ -81,10 +83,12 @@ export const page = defineType({
       },
     }),
     defineField({
-      title: "Unlisted",
-      description: "If unlisted is true then it wont show on up google search.",
+      title:
+        "💡 If this is checked, then this page won't show up on Google search.",
+      description: "",
       name: "indexPage",
       type: "boolean",
+
       initialValue: false,
     }),
     defineField({
