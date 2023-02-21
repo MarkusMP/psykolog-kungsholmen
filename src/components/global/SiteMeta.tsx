@@ -56,10 +56,10 @@ export function SiteMeta({
       {ogImage && <meta property="og:image:width" content="1200" />}
       {ogImage && <meta property="og:image:height" content="630" />}
 
-      {noIndex && <meta key="robots" name="robots" content="noindex,follow" />}
+      {/* {noIndex && <meta key="robots" name="robots" content="noindex,follow" />}
       {noIndex && (
         <meta key="googlebot" name="googlebot" content="noindex,follow" />
-      )}
+      )} */}
     </Head>
   );
 }
