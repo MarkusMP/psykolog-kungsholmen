@@ -6,7 +6,7 @@ import { schema } from "./src/sanity/schemas";
 import { media } from "sanity-plugin-media";
 
 export default defineConfig<Config>({
-  basePath: "/studio",
+  basePath: "/admin",
   dataset,
   projectId,
   schema,
