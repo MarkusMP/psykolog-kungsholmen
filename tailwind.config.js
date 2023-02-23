@@ -12,6 +12,7 @@ module.exports = {
     },
     screens: {
       xs: "360px",
+      xsm: "560px",
       sm: "640px",
       md: "768px",
       mdl: "868px",
@@ -21,8 +22,8 @@ module.exports = {
     colors: {
       transparent: "transparent",
       primary: "#043C2C",
-      primary_accent: "#0FBF8D",
-      secondary: "#F9FBF2",
+      primary_accent: "#265847",
+      secondary: "#E8F3F5",
       dark: "#1E1E1E",
       white: "#ffffff",
       background: "#fff",

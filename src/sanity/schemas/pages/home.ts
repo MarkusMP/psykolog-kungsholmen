@@ -60,7 +60,7 @@ export const home = defineType({
       name: "content",
       type: "array",
       title: "Content / body of the page",
-      of: [{ type: "hero" }],
+      of: [{ type: "hero" }, { type: "feature" }],
     }),
     defineField({
       title: "Title for SEO & social sharing",

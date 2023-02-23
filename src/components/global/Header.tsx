@@ -52,7 +52,7 @@ const Header = ({ data: { image, menuItems } }: IProps) => {
 
   const imageUrl = image && urlForImage(image as any)?.url();
   return (
-    <header ref={menuRef} className={`h-[80px] fixed w-full bg-white`}>
+    <header ref={menuRef} className={`h-[80px] fixed w-full bg-white z-10`}>
       <nav className="flex justify-between items-center xl:container mx-auto h-full px-4 relative">
         <div className={`w-full z-[2] h-full flex items-center lg:w-auto mr-4`}>
           <Link href={"/"}>
