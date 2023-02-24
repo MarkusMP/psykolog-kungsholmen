@@ -22,7 +22,7 @@ export const feature = defineType({
       title: "Title",
     }),
     defineField({
-      type: "string",
+      type: "text",
       name: "description",
       title: "Description",
     }),

@@ -8,6 +8,10 @@
   }
 }
 
+.flip-vertical {
+  --transform-scale-y: -1;
+}
+
 /* Hamburger */
 
 .hamburger {

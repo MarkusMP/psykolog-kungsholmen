@@ -13,3 +13,48 @@ export interface IFeaturePayload {
   description?: string;
   image?: Image;
 }
+
+export interface ISideBarInfoAndContentPayload {
+  image?: Image;
+  contactTitle?: string;
+  description?: string;
+  greeting?: string;
+  contactInfoList?: IContactInfoListItem[];
+  content?: any[];
+}
+
+export interface IContactInfoListItem {
+  _id?: string;
+  infoName?: string;
+  text?: string;
+}
+
+export interface IFeatureTwoPayload {
+  title?: string;
+  btnText?: string;
+  description?: string;
+  link?: { slug: string };
+  titleColor?: string;
+}
+
+export interface ICheckListPayload {
+  title?: string;
+  list?: IstringListItem[];
+}
+
+export interface IstringListItem {
+  text?: string;
+  _key?: string;
+}
+
+export interface ICardListPayload {
+  title?: string;
+  description?: string;
+  list: ICardItem[];
+}
+
+export interface ICardItem {
+  title?: string;
+  description?: string;
+  _key?: string;
+}

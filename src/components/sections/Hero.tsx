@@ -19,15 +19,15 @@ const Hero = ({ btnText, description, image, link, title }: IHeroPayload) => {
     >
       <div className="flex flex-col sm:flex-row w-full xl:container mx-auto">
         <div className="sm:w-1/2 px-4 pt-4 sm:self-center">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl montserrat pb-7 font-bold text-primary">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl montserrat pb-6 font-bold text-primary">
             {title && title}
           </h1>
-          <p className="pb-7 text-gray max-w-xl">
+          <p className="pb-6 text-gray max-w-xl">
             {description && description}
           </p>
           {btnText && (
             <Link
-              className="montserrat text-center block max-w-fit rounded-full bg-primary px-12 py-4 tracking-wider text-white transition-colors hover:bg-primary_accent"
+              className="montserrat text-center block max-w-fit rounded-full bg-primary px-9 py-[14px] tracking-wider text-white transition-colors hover:bg-primary_accent"
               href={link?.slug ? `${link.slug}` : "/"}
             >
               {btnText && btnText}
@@ -42,7 +42,7 @@ const Hero = ({ btnText, description, image, link, title }: IHeroPayload) => {
                 src={imageUrl as any}
                 width={1000}
                 height={1000}
-                className="max-h-[769px] xs:pl-14 sm:pl-0 md:pl-10  "
+                className="max-h-[769px] xs:pl-14 sm:pl-0 md:pl-10"
                 alt={image?.alt || ""}
               />
             )}

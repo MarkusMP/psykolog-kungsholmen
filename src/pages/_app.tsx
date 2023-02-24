@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
           font-family: ${montserrat.style.fontFamily} !important;
         }
       `}</style>
-      <main className={`${inter.variable} ${montserrat.variable} font-sans`}>
+      <main className={`${inter.variable} ${montserrat.variable}`}>
         <Component {...pageProps} />
       </main>
     </>

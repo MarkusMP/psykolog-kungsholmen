@@ -44,6 +44,17 @@ export const HOME_PAGE_DATA_QUERY = groq`
             link-> {
                 "slug": slug.current,
             },
+            contactInfoList[] -> {
+                infoName,
+                text,
+                _id
+            },
+            content[]{
+                ...,
+                link-> {
+                    "slug": slug.current,
+                },
+            }
         }
     }
 `;

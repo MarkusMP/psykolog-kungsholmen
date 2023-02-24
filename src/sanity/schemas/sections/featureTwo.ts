@@ -1,18 +1,19 @@
 import { defineField, defineType } from "sanity";
-import { ExpandIcon } from "@sanity/icons";
+import { BlockContentIcon } from "@sanity/icons";
 
-export const hero = defineType({
+export const featureTwo = defineType({
   type: "document",
-  name: "hero",
-  title: "Hero",
-  icon: ExpandIcon,
+  name: "featureTwo",
+  title: "Feature Two",
+  icon: BlockContentIcon,
   preview: {
     select: {
       title: "title",
+      titleColor: "titleColor",
     },
-    prepare: ({ title }) => ({
-      media: ExpandIcon,
-      title: `Hero - ${title}`,
+    prepare: ({ title, titleColor }) => ({
+      media: BlockContentIcon,
+      title: `Feature two - ${title + " " + titleColor}`,
     }),
   },
   fieldsets: [
@@ -20,31 +21,28 @@ export const hero = defineType({
       title: "Button",
       name: "btn",
     },
+    {
+      title: "Title",
+      name: "title",
+    },
   ],
   fields: [
     defineField({
       type: "string",
       name: "title",
       title: "Title",
+      fieldset: "title",
     }),
     defineField({
-      name: "description",
+      type: "string",
+      name: "titleColor",
+      title: "Title Color",
+      fieldset: "title",
+    }),
+    defineField({
       type: "text",
+      name: "description",
       title: "Description",
-    }),
-    defineField({
-      title: "Image",
-      description: "Upload image here.",
-      name: "image",
-      type: "image",
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative text",
-          description: "Important for SEO and accessiblity.",
-        },
-      ],
     }),
     defineField({
       name: "btnText",
