@@ -82,6 +82,12 @@ export const sideBarInfoAndContent = defineType({
         {
           type: "cardList",
         },
+        {
+          type: "testimonialsCarousel",
+        },
+        {
+          type: "cardListTwo",
+        },
       ],
     }),
   ],

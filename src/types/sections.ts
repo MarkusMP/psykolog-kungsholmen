@@ -58,3 +58,38 @@ export interface ICardItem {
   description?: string;
   _key?: string;
 }
+
+export interface ITestimonialsCarouselPayload {
+  title?: string;
+  testimonialItems: ITestimonialItem[];
+}
+
+export interface ITestimonialItem {
+  image?: Image;
+  description?: string;
+  name?: string;
+  rating?: number;
+  _id?: string;
+}
+
+export interface ICardListTwo {
+  title?: string;
+  description?: string;
+  list?: ICardListTwoItem[];
+}
+
+export interface ICardListTwoItem {
+  title?: string;
+  description?: string;
+  _key?: string;
+  image?: Image;
+}
+
+export interface ICtaPayload {
+  title?: string;
+  description?: string;
+  btnText?: string;
+  link?: { slug: string };
+  image?: Image;
+  location?: string;
+}

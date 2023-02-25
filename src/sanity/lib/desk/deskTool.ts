@@ -2,6 +2,7 @@ import { PagePreview } from "@/sanity/preview/PagePreview";
 import {
   DocumentIcon,
   ErrorOutlineIcon,
+  HeartIcon,
   HomeIcon,
   MenuIcon,
   UnknownIcon,
@@ -56,6 +57,16 @@ export const deskTool = definePlugin(() => {
                   S.view.form().title("Content"),
                   S.view.component(PagePreview).title("Preview"),
                 ])
+            ),
+          S.divider(),
+          S.listItem()
+            .title("Testimonials")
+            .icon(HeartIcon)
+            .child(
+              S.documentList()
+                .title(`Testimonials documents`)
+                .schemaType("testimonials")
+                .filter('_type == "testimonials"')
             ),
           S.divider(),
           S.listItem()

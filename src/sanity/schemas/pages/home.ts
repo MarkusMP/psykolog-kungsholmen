@@ -64,6 +64,7 @@ export const home = defineType({
         { type: "hero" },
         { type: "feature" },
         { type: "sideBarInfoAndContent" },
+        { type: "cta" },
       ],
     }),
     defineField({

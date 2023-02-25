@@ -7,16 +7,21 @@ import {
   footerLinks,
   content,
   cardListItem,
+  testimonials,
+  cardListItemTwo,
 } from "./other";
 import { home, page, notFound } from "./pages";
 import {
   cardList,
+  cardListTwo,
   checkList,
+  cta,
   feature,
   featureTwo,
   hero,
   infoSidebar,
   sideBarInfoAndContent,
+  testimonialsCarousel,
 } from "./sections";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -38,5 +43,10 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     content,
     cardList,
     cardListItem,
+    testimonials,
+    testimonialsCarousel,
+    cardListItemTwo,
+    cardListTwo,
+    cta,
   ],
 };

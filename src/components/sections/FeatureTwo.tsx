@@ -10,7 +10,7 @@ const FeatureTwo = ({
   titleColor,
 }: IFeatureTwoPayload) => {
   return (
-    <section className="max-w-full md:max-w-[75%] pt-12 pb-6">
+    <section className="max-w-full md:max-w-[75%] pt-6 pb-6">
       <h2 className="text-2xl text-dark font-bold montserrat">
         {title && title}
         <span className="text-primary"> {titleColor && titleColor}</span>

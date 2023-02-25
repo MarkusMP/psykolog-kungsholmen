@@ -1,8 +1,8 @@
-import { ICardListPayload } from "@/types/sections";
+import { ICardListTwo } from "@/types/sections";
 import React from "react";
-import CardListItem from "../other/CardListItem";
+import CardListTwoItem from "../other/CardListTwoItem";
 
-const CardList = ({ list, description, title }: ICardListPayload) => {
+const CardListTwo = ({ description, list, title }: ICardListTwo) => {
   return (
     <section className="py-6">
       <div className="max-w-full md:max-w-[75%]">
@@ -13,12 +13,12 @@ const CardList = ({ list, description, title }: ICardListPayload) => {
           <p className="text-gray">{description && description}</p>
         )}
       </div>
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 pt-6 pr-0 lg:pr-12 auto-rows-fr">
+      <div className="grid grid-cols-1 sm:grid-cols-2 pt-6 gap-6 pr-0 lg:pr-12">
         {list &&
-          list.map((item) => <CardListItem key={item._key} data={item} />)}
+          list.map((item) => <CardListTwoItem key={item._key} data={item} />)}
       </div>
     </section>
   );
 };
 
-export default CardList;
+export default CardListTwo;

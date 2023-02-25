@@ -30,12 +30,12 @@ const SideBarInfoAndContent = ({
 
   return (
     <div className="flex w-full justify-between xl:container mx-auto px-4 row relative">
-      <main className="w-full flex-1">
+      <main className="flex-1 w-1/2 py-6">
         {content && <RenderSections sections={content} />}
       </main>
 
       <div style={{ display: "flex", alignItems: "flex-start" }}>
-        <aside className="max-w-[265px] mt-12 top-0 hidden lg:block pb-6 sticky top-[80px]">
+        <aside className="max-w-[265px] mt-12 top-0 hidden lg:block pb-12 sticky top-[80px] pb-12">
           {imageUrl && (
             <Image
               priority

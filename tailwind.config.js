@@ -23,11 +23,12 @@ module.exports = {
       transparent: "transparent",
       primary: "#043C2C",
       primary_accent: "#00BE6E",
-      secondary: "#043C2C",
+      secondary: "#008c51",
       dark: "#1E1E1E",
       white: "#ffffff",
       background: "#fff",
       gray: "#6A6A6A",
+      yellow: "#F3C00A",
     },
     container: {
       screens: {

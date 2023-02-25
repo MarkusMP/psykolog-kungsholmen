@@ -7,10 +7,10 @@ const Feature = ({ description, image, title }: IFeaturePayload) => {
   const imageUrl = image && urlForImage(image as any)?.url();
 
   return (
-    <section className="bg-primary py-14 mt-[-1px]">
+    <section className="bg-primary py-12 mt-[-1px]">
       <div className="flex flex-col mdl:flex-row w-full xl:container mx-auto justify-between items-center px-4 ">
         <div className="w-full order-2 mdl:order-1 pt-6 mdl:pt-0 lg:w-1/2 xl:w-6/12 md:pr-2 lg:max-w-[585px]">
-          <h2 className="pb-6 text-3xl text-white font-semibold montserrat">
+          <h2 className="pb-2 text-3xl text-white font-semibold montserrat">
             {title && title}
           </h2>
           <p className="text-white">{description && description}</p>

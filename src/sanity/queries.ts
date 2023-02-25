@@ -44,7 +44,7 @@ export const HOME_PAGE_DATA_QUERY = groq`
             link-> {
                 "slug": slug.current,
             },
-            contactInfoList[] -> {
+            contactInfoList[]-> {
                 infoName,
                 text,
                 _id
@@ -54,6 +54,13 @@ export const HOME_PAGE_DATA_QUERY = groq`
                 link-> {
                     "slug": slug.current,
                 },
+                testimonialItems[]-> {
+                    image,
+                    _id,
+                    name,
+                    rating,
+                    description,
+                }
             }
         }
     }
