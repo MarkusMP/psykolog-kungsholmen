@@ -19,6 +19,7 @@ import {
   feature,
   featureTwo,
   hero,
+  heroTwo,
   infoSidebar,
   sideBarInfoAndContent,
   testimonialsCarousel,
@@ -48,5 +49,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     cardListItemTwo,
     cardListTwo,
     cta,
+    heroTwo,
   ],
 };

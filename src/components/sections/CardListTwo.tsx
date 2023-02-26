@@ -13,7 +13,7 @@ const CardListTwo = ({ description, list, title }: ICardListTwo) => {
           <p className="text-gray">{description && description}</p>
         )}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 pt-6 gap-6 pr-0 lg:pr-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 pt-6 gap-6 pr-0">
         {list &&
           list.map((item) => <CardListTwoItem key={item._key} data={item} />)}
       </div>

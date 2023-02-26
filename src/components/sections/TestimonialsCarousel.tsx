@@ -74,7 +74,7 @@ const TestimonialsCarousel = ({
         </h2>
       </div>
 
-      <div className="pr-0 lg:pr-12 pt-6" style={{ overflowY: "visible" }}>
+      <div className="pr-0 pt-6" style={{ overflowY: "visible" }}>
         <div
           ref={ref}
           className="keen-slider w-full"

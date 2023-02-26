@@ -77,6 +77,24 @@ export const PAGE_DATA_QUERY = groq`
             link-> {
                 "slug": slug.current,
             },
+            contactInfoList[]-> {
+                infoName,
+                text,
+                _id
+            },
+            content[]{
+                ...,
+                link-> {
+                    "slug": slug.current,
+                },
+                testimonialItems[]-> {
+                    image,
+                    _id,
+                    name,
+                    rating,
+                    description,
+                }
+            }
         }
     }
 `;

@@ -69,6 +69,15 @@ export const sideBarInfoAndContent = defineType({
       ],
     }),
     defineField({
+      title:
+        "💡 If this is checked, then the sidebar will show up on the left side.",
+      description: "",
+      name: "sidebarPlacement",
+      type: "boolean",
+
+      initialValue: false,
+    }),
+    defineField({
       name: "content",
       type: "array",
       title: "Content / body of the page",

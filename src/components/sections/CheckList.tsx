@@ -4,11 +4,11 @@ import { BsCheck } from "react-icons/bs";
 
 const CheckList = ({ list, title }: ICheckListPayload) => {
   return (
-    <section className="py-6">
+    <section className="py-6 md:max-w-[75%]">
       <h2 className="text-2xl text-dark font-bold montserrat max-w-full md:max-w-[75%]">
         {title && title}
       </h2>
-      <div className="pt-6">
+      <div className="pt-6 ">
         {list &&
           list.map((item) => (
             <div key={item._key} className="pb-3 flex items-center">

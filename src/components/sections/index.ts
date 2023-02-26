@@ -7,3 +7,4 @@ export { default as CardList } from "./CardList";
 export { default as CardListTwo } from "./CardListTwo";
 export { default as TestimonialsCarousel } from "./TestimonialsCarousel";
 export { default as Cta } from "./Cta";
+export { default as HeroTwo } from "./HeroTwo";

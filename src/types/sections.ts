@@ -19,6 +19,7 @@ export interface ISideBarInfoAndContentPayload {
   contactTitle?: string;
   description?: string;
   greeting?: string;
+  sidebarPlacement?: boolean;
   contactInfoList?: IContactInfoListItem[];
   content?: any[];
 }
@@ -92,4 +93,8 @@ export interface ICtaPayload {
   link?: { slug: string };
   image?: Image;
   location?: string;
+}
+
+export interface IHeroTwo {
+  title?: string;
 }

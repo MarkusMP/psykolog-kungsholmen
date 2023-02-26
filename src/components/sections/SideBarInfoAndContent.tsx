@@ -12,8 +12,8 @@ const SideBarInfoAndContent = ({
   description,
   greeting,
   image,
+  sidebarPlacement,
 }: ISideBarInfoAndContentPayload) => {
-  const height = useWindowHeight();
   const imageUrl = image && urlForImage(image as any)?.url();
 
   const name =
@@ -30,12 +30,19 @@ const SideBarInfoAndContent = ({
 
   return (
     <div className="flex w-full justify-between xl:container mx-auto px-4 row relative">
-      <main className="flex-1 w-1/2 py-6">
+      <main
+        className={`flex-1 w-1/2 py-6 ${
+          sidebarPlacement ? "order-2" : "order-1"
+        }`}
+      >
         {content && <RenderSections sections={content} />}
       </main>
 
-      <div style={{ display: "flex", alignItems: "flex-start" }}>
-        <aside className="max-w-[265px] mt-12 top-0 hidden lg:block pb-12 sticky top-[80px] pb-12">
+      <div
+        style={{ display: "flex", alignItems: "flex-start" }}
+        className={`${sidebarPlacement ? "order-1 pr-12" : "order-2 pl-12"}`}
+      >
+        <aside className="max-w-[265px] mt-12 top-0 hidden lg:block pb-12 sticky top-[80px]">
           {imageUrl && (
             <Image
               priority
@@ -46,12 +53,18 @@ const SideBarInfoAndContent = ({
               alt={image?.alt || ""}
             />
           )}
-          <p className="pt-2">
-            <span className="text-primary text-xl font-semibold mr-1 montserrat">
-              {greeting && greeting}
-            </span>
-            {description && description}
-          </p>
+          {description && (
+            <p className="pt-2">
+              {greeting && (
+                <span className="text-primary text-xl font-semibold mr-1 montserrat">
+                  {greeting}
+                </span>
+              )}
+
+              {description}
+            </p>
+          )}
+
           <h2 className="pt-4 text-primary text-xl font-semibold montserrat">
             {contactTitle && contactTitle}
           </h2>

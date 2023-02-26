@@ -8,3 +8,4 @@ export * from "./cardList";
 export * from "./testimonialsCarousel";
 export * from "./cardListTwo";
 export * from "./cta";
+export * from "./HeroTwo";

@@ -62,6 +62,7 @@ export const home = defineType({
       title: "Content / body of the page",
       of: [
         { type: "hero" },
+        { type: "heroTwo" },
         { type: "feature" },
         { type: "sideBarInfoAndContent" },
         { type: "cta" },

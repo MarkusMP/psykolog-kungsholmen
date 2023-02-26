@@ -96,9 +96,11 @@ export const page = defineType({
       type: "array",
       title: "Content / body of the page",
       of: [
-        {
-          type: "hero",
-        },
+        { type: "hero" },
+        { type: "heroTwo" },
+        { type: "feature" },
+        { type: "sideBarInfoAndContent" },
+        { type: "cta" },
       ],
     }),
     defineField({
