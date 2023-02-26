@@ -44,7 +44,7 @@ const Cta = ({
           )}
           {location && (
             <p className="text-white pt-2 flex items-center">
-              <CgPin className="mr-2 text-xl" /> {location}
+              <CgPin className="mr-2 text-xl min-w-[20px]" /> {location}
             </p>
           )}
         </div>
