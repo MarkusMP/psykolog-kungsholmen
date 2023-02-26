@@ -15,7 +15,7 @@ const Footer = ({
   const imageUrl = image && urlForImage(image as any)?.url();
   return (
     <footer className="bg-white w-full">
-      <div className="xl:container py-8 mx-auto px-4 flex flex-col mdl:flex-row justify-between w-full">
+      <div className="xl:container py-12 mx-auto px-4 flex flex-col mdl:flex-row justify-between w-full">
         <div className="mr-6 pb-6 mdl:pb-0">
           <div className={`flex items-center lg:w-auto`}>
             <Link href={"/"}>

@@ -24,7 +24,9 @@ const CardListTwoItem = ({ data: { description, image, title } }: IProps) => {
         </div>
       )}
       <h3 className="font-lg font-semibold pt-3">{title && title}</h3>
-      <p className="text-gray">{description && description}</p>
+      <p className="text-gray whitespace-pre-wrap">
+        {description && description}
+      </p>
     </div>
   );
 };

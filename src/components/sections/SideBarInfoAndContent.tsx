@@ -32,7 +32,7 @@ const SideBarInfoAndContent = ({
     <div className="flex w-full justify-between xl:container mx-auto px-4 row relative">
       <main
         className={`flex-1 w-1/2 py-6 ${
-          sidebarPlacement ? "order-2" : "order-1"
+          sidebarPlacement ? "order-2 lg:w-full" : "order-1"
         }`}
       >
         {content && <RenderSections sections={content} />}
@@ -40,7 +40,9 @@ const SideBarInfoAndContent = ({
 
       <div
         style={{ display: "flex", alignItems: "flex-start" }}
-        className={`${sidebarPlacement ? "order-1 pr-12" : "order-2 pl-12"}`}
+        className={`${
+          sidebarPlacement ? "order-1 lg:pr-12 lg:w-1/2" : "order-2 lg:pl-12"
+        }`}
       >
         <aside className="max-w-[265px] mt-12 top-0 hidden lg:block pb-12 sticky top-[80px]">
           {imageUrl && (

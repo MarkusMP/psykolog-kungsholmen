@@ -13,7 +13,9 @@ const Feature = ({ description, image, title }: IFeaturePayload) => {
           <h2 className="pb-2 text-3xl text-white font-semibold montserrat">
             {title && title}
           </h2>
-          <p className="text-white">{description && description}</p>
+          <p className="text-white whitespace-pre-wrap">
+            {description && description}
+          </p>
         </div>
         <div className="order-1 mdl:order-2 w-full lg:w-1/2 xl:w-6/12 md:pl-2">
           {imageUrl && (

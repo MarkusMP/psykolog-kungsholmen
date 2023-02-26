@@ -15,6 +15,7 @@ import {
   cardList,
   cardListTwo,
   checkList,
+  contact,
   cta,
   feature,
   featureTwo,
@@ -50,5 +51,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     cardListTwo,
     cta,
     heroTwo,
+    contact,
   ],
 };

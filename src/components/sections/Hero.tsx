@@ -22,7 +22,7 @@ const Hero = ({ btnText, description, image, link, title }: IHeroPayload) => {
           <h1 className="text-3xl sm:text-5xl lg:text-6xl montserrat pb-6 font-bold text-primary">
             {title && title}
           </h1>
-          <p className="pb-6 text-gray max-w-xl">
+          <p className="pb-6 text-gray max-w-xl whitespace-pre-wrap">
             {description && description}
           </p>
           {btnText && (

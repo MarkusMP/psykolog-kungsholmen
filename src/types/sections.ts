@@ -98,3 +98,7 @@ export interface ICtaPayload {
 export interface IHeroTwo {
   title?: string;
 }
+
+export interface IContactPayload {
+  btnText?: string;
+}

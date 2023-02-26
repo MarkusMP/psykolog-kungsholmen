@@ -97,6 +97,9 @@ export const sideBarInfoAndContent = defineType({
         {
           type: "cardListTwo",
         },
+        {
+          type: "contact",
+        },
       ],
     }),
   ],
