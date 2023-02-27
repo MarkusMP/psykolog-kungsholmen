@@ -91,8 +91,9 @@ export interface ICtaPayload {
   description?: string;
   btnText?: string;
   link?: { slug: string };
-  image?: Image;
   location?: string;
+  latitude?: number;
+  longitude?: number;
 }
 
 export interface IHeroTwo {

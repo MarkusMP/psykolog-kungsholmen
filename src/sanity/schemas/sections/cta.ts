@@ -20,6 +20,10 @@ export const cta = defineType({
       title: "Button",
       name: "btn",
     },
+    {
+      title: "Map",
+      name: "map",
+    },
   ],
   fields: [
     defineField({
@@ -53,23 +57,22 @@ export const cta = defineType({
       ],
     }),
     defineField({
-      title: "Image",
-      description: "Upload map screenshot here.",
-      name: "image",
-      type: "image",
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative text",
-          description: "Important for SEO and accessiblity.",
-        },
-      ],
+      type: "number",
+      name: "longitude",
+      title: "Longitude",
+      fieldset: "map",
+    }),
+    defineField({
+      type: "number",
+      name: "latitude",
+      title: "Latitude",
+      fieldset: "map",
     }),
     defineField({
       type: "string",
       name: "location",
       title: "Location",
+      fieldset: "map",
     }),
   ],
 });
