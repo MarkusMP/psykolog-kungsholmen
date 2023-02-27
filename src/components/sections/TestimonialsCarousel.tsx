@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import TestimonialCarouselItem from "../other/TestimonialCarouselItem";
+import { Transition } from "@headlessui/react";
+import { useInView } from "react-intersection-observer";
 
 const TestimonialsCarousel = ({
   testimonialItems,
@@ -11,6 +13,11 @@ const TestimonialsCarousel = ({
   const [loaded, setLoaded] = useState(false);
   const [view, setview] = useState(1);
   const [currentSlide, setCurrentSlide] = React.useState(0);
+  const { ref: refView, inView } = useInView({
+    rootMargin: "15px",
+    triggerOnce: true,
+  });
+
   const [ref, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
     slideChanged(s) {
@@ -67,17 +74,27 @@ const TestimonialsCarousel = ({
   });
 
   return (
-    <section className="py-6">
-      <div className="max-w-full md:max-w-[75%]">
+    <section className="py-6" ref={refView}>
+      <Transition
+        show={inView}
+        as="div"
+        enter="transition-opacity duration-[800ms]"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        className="max-w-full md:max-w-[75%]"
+      >
         <h2 className="text-2xl text-dark font-bold montserrat">
           {title && title}
         </h2>
-      </div>
+      </Transition>
 
-      <div className="pr-0 pt-6" style={{ overflowY: "visible" }}>
+      <div
+        className={`pr-0 pt-6 ${inView && "card-list"}`}
+        style={{ overflowY: "visible" }}
+      >
         <div
           ref={ref}
-          className="keen-slider w-full"
+          className="keen-slider w-full "
           style={{ overflowY: "visible" }}
         >
           {testimonialItems &&

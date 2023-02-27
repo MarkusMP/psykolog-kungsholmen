@@ -8,7 +8,7 @@ interface IProps {
 
 const CardListItem = ({ data: { description, title } }: IProps) => {
   return (
-    <div className="bg-primary rounded-[20px] p-7 relative overflow-hidden z-[2]">
+    <div className="bg-primary rounded-[20px] p-7 relative overflow-hidden z-[2] hover:scale-105 transition-transform">
       <h3 className="text-white text-lg font-semibold pb-2 z-[2]">
         {title && title}
       </h3>

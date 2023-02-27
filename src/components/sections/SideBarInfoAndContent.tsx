@@ -1,4 +1,3 @@
-import { useWindowHeight } from "@/hooks/useWindowHeight";
 import { urlForImage } from "@/sanity/lib/image";
 import { ISideBarInfoAndContentPayload } from "@/types/sections";
 import Image from "next/image";

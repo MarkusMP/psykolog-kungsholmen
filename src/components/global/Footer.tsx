@@ -1,9 +1,11 @@
 import { urlForImage } from "@/sanity/lib/image";
 import { IFooterPayload } from "@/types";
+import { Transition } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { MdLocationOn, MdOutlineEmail, MdPhone } from "react-icons/md";
+import { useInView } from "react-intersection-observer";
 
 interface IProps {
   data: IFooterPayload;
@@ -12,10 +14,21 @@ interface IProps {
 const Footer = ({
   data: { copyright, description, image, info, menuItems },
 }: IProps) => {
+  const { ref, inView } = useInView({
+    rootMargin: "15px",
+    triggerOnce: true,
+  });
   const imageUrl = image && urlForImage(image as any)?.url();
   return (
-    <footer className="bg-white w-full">
-      <div className="xl:container py-12 mx-auto px-4 flex flex-col mdl:flex-row justify-between w-full">
+    <footer className="bg-white w-full" ref={ref}>
+      <Transition
+        show={inView}
+        as="div"
+        enter="transition-opacity duration-[800ms]"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        className="xl:container py-12 mx-auto px-4 flex flex-col mdl:flex-row justify-between w-full"
+      >
         <div className="mr-6 pb-6 mdl:pb-0">
           <div className={`flex items-center lg:w-auto`}>
             <Link href={"/"}>
@@ -83,7 +96,7 @@ const Footer = ({
               </div>
             ))}
         </div>
-      </div>
+      </Transition>
       <div className="mx-auto py-6 border-t-[1px] border-primary xl:container px-4">
         <p className="text-center text-dark">
           {copyright && copyright} - Byggt av{" "}

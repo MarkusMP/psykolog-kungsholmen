@@ -84,3 +84,19 @@
 .dot.active {
   background: #1e1e1e;
 }
+
+/* list animate */
+
+.card-list {
+  opacity: 0;
+  animation: fade-in 0.8s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

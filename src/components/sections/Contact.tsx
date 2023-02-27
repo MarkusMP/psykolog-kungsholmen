@@ -1,19 +1,33 @@
 import { IContactPayload } from "@/types/sections";
+import { Transition } from "@headlessui/react";
 import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Contact = ({ btnText }: IContactPayload) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
+  const { ref, inView } = useInView({
+    rootMargin: "15px",
+    triggerOnce: true,
+  });
 
   const submitHandler = (e: any) => {
     e.preventDefault();
   };
 
   return (
-    <section className="py-6 flex h-full">
-      <form className="w-full" onSubmit={submitHandler}>
+    <section className="py-6 flex h-full" ref={ref}>
+      <Transition
+        show={inView}
+        as="form"
+        enter="transition-opacity duration-[800ms]"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        className="w-full"
+        onSubmit={submitHandler}
+      >
         <div className="flex flex-col pb-4">
           <label
             htmlFor="name"
@@ -87,7 +101,7 @@ const Contact = ({ btnText }: IContactPayload) => {
         >
           {btnText && btnText}
         </button>
-      </form>
+      </Transition>
     </section>
   );
 };

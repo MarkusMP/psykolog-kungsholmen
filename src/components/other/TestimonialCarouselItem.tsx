@@ -14,9 +14,9 @@ const TestimonialCarouselItem = ({ data, index }: IProps) => {
 
   return (
     <div
-      className={`keen-slider__slide px-2 pb-6 pt-12 number-slide${index + 1}`}
+      className={`keen-slider__slide px-3 pb-6 pt-12 number-slide${index + 1}`}
     >
-      <div className="bg-white h-full drop-shadow-lg rounded-[20px] relative px-6 pb-6 pt-2 relative">
+      <div className="bg-white hover:scale-105 transition-transform h-full drop-shadow-lg rounded-[20px] relative px-6 pb-6 pt-2 relative">
         <div
           style={{ transform: "translate(-50%, 0)", left: "50%" }}
           className="absolute mx-auto top-[-40px] flex h-[75px] w-[75px] overflow-hidden rounded-full"
