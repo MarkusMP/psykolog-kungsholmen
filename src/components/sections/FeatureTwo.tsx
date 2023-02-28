@@ -25,16 +25,16 @@ const FeatureTwo = ({
         enterFrom="opacity-0"
         enterTo="opacity-100"
       >
-        <h2 className="text-2xl text-dark font-bold montserrat md:max-w-[75%]">
+        <h2 className="text-2xl text-dark font-bold montserrat">
           {title && title}
           <span className="text-primary"> {titleColor && titleColor}</span>
         </h2>
-        <p className="pt-2 pb-4 text-gray whitespace-pre-wrap">
+        <p className="pt-2 text-gray whitespace-pre-wrap">
           {description && description}
         </p>
         {btnText && (
           <Link
-            className="montserrat text-center block max-w-fit rounded-full bg-primary px-9 py-[14px] tracking-wider text-white transition-colors hover:bg-primary_accent"
+            className="montserrat text-center block mt-4 max-w-fit rounded-full bg-primary px-9 py-[14px] tracking-wider text-white transition-colors hover:bg-primary_accent"
             href={link?.slug ? `${link.slug}` : "/"}
           >
             {btnText && btnText}
