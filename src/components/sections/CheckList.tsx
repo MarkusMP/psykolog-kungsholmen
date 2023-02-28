@@ -19,7 +19,7 @@ const CheckList = ({ list, title }: ICheckListPayload) => {
         enterFrom="opacity-0"
         enterTo="opacity-100"
       >
-        <h2 className="text-2xl text-dark font-bold montserrat max-w-full md:max-w-[75%]">
+        <h2 className="text-xl sm:text-2xl text-dark font-bold montserrat max-w-full md:max-w-[75%]">
           {title && title}
         </h2>
 

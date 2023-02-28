@@ -19,7 +19,7 @@ const CardList = ({ list, description, title }: ICardListPayload) => {
         enterTo="opacity-100"
         className="max-w-full"
       >
-        <h2 className="text-2xl text-dark font-bold montserrat pb-2 md:max-w-[75%]">
+        <h2 className="text-xl sm:text-2xl text-dark font-bold montserrat pb-2 md:max-w-[75%]">
           {title && title}
         </h2>
         {description && (

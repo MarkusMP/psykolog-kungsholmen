@@ -83,7 +83,7 @@ const TestimonialsCarousel = ({
         enterTo="opacity-100"
         className="max-w-full md:max-w-[75%]"
       >
-        <h2 className="text-2xl text-dark font-bold montserrat">
+        <h2 className="text-xl sm:text-2xl text-dark font-bold montserrat">
           {title && title}
         </h2>
       </Transition>

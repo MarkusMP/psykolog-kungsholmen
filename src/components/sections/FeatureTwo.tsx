@@ -25,7 +25,7 @@ const FeatureTwo = ({
         enterFrom="opacity-0"
         enterTo="opacity-100"
       >
-        <h2 className="text-2xl text-dark font-bold montserrat">
+        <h2 className="text-xl sm:text-2xl text-dark font-bold montserrat">
           {title && title}
           <span className="text-primary"> {titleColor && titleColor}</span>
         </h2>
