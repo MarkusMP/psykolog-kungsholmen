@@ -1,4 +1,5 @@
 import { useWindowHeight } from "@/hooks/useWindowHeight";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 import { urlForImage } from "@/sanity/lib/image";
 import { IHeroPayload } from "@/types/sections";
 import Image from "next/image";
@@ -7,13 +8,16 @@ import React from "react";
 
 const Hero = ({ btnText, description, image, link, title }: IHeroPayload) => {
   const height = useWindowHeight();
+  const width = useWindowWidth();
 
   const imageUrl = image && urlForImage(image as any)?.url();
 
   return (
     <section
       className={`flex relative pt-[80px] overflow-y-hidden ${
-        height && height < 860 ? "min-h-[860px] h-full" : "xl:h-screen"
+        height && height < 860 && width > 1200
+          ? "min-h-[860px] h-full"
+          : "xl:h-screen"
       }`}
       style={{ maxHeight: "1080px !important" }}
     >
