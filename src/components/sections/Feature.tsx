@@ -2,6 +2,7 @@ import { urlForImage } from "@/sanity/lib/image";
 import { IFeaturePayload } from "@/types/sections";
 import Image from "next/image";
 import React from "react";
+import CustomPortableText from "../utils/CustomPortableText";
 
 const Feature = ({ description, image, title }: IFeaturePayload) => {
   const imageUrl =
@@ -17,9 +18,9 @@ const Feature = ({ description, image, title }: IFeaturePayload) => {
           <h2 className="pb-2 text-3xl text-white font-semibold montserrat">
             {title && title}
           </h2>
-          <p className="text-white whitespace-pre-wrap">
-            {description && description}
-          </p>
+          {description && (
+            <CustomPortableText textContent={description} darkMode={true} />
+          )}
         </div>
         <div className="order-1 mdl:order-2 w-full lg:w-1/2 xl:w-6/12 md:pl-2 flex justify-end">
           {imageUrl && (

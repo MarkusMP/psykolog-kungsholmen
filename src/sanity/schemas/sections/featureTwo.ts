@@ -40,7 +40,7 @@ export const featureTwo = defineType({
       fieldset: "title",
     }),
     defineField({
-      type: "text",
+      type: "blockContent",
       name: "description",
       title: "Description",
     }),

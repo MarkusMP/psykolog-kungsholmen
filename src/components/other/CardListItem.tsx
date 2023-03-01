@@ -1,6 +1,7 @@
 import React from "react";
 import { IoLeafOutline } from "react-icons/io5";
 import { ICardItem } from "@/types/sections";
+import CustomPortableText from "../utils/CustomPortableText";
 
 interface IProps {
   data: ICardItem;
@@ -12,7 +13,11 @@ const CardListItem = ({ data: { description, title } }: IProps) => {
       <h3 className="text-white text-lg font-semibold pb-2 z-[2]">
         {title && title}
       </h3>
-      <p className="text-white z-[2]">{description && description}</p>
+      <div className="z-[2]">
+        {description && (
+          <CustomPortableText textContent={description} darkMode={true} />
+        )}
+      </div>
 
       <IoLeafOutline className="text-primary_accent opacity-20 text-6xl z-[-1] bottom-[-15px] absolute right-[-15px] transform rotate-[-0deg] " />
       <IoLeafOutline className="text-primary_accent opacity-20 text-6xl z-[-1] bottom-[45px] absolute right-[-35px] transform rotate-[-90deg] " />

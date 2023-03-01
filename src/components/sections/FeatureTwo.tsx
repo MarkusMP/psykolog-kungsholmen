@@ -3,6 +3,7 @@ import { Transition } from "@headlessui/react";
 import Link from "next/link";
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import CustomPortableText from "../utils/CustomPortableText";
 
 const FeatureTwo = ({
   btnText,
@@ -29,9 +30,12 @@ const FeatureTwo = ({
           {title && title}
           <span className="text-primary"> {titleColor && titleColor}</span>
         </h2>
-        <p className="pt-2 text-gray whitespace-pre-wrap">
-          {description && description}
-        </p>
+        <div className="pt-2">
+          {description && (
+            <CustomPortableText textContent={description} darkMode={false} />
+          )}
+        </div>
+
         {btnText && (
           <Link
             className="montserrat text-center block mt-4 max-w-fit rounded-full bg-primary px-9 py-[14px] tracking-wider text-white transition-colors hover:bg-secondary"

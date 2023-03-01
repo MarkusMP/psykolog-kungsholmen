@@ -2,6 +2,7 @@ import { urlForImage } from "@/sanity/lib/image";
 import { ICardListTwoItem } from "@/types/sections";
 import Image from "next/image";
 import React from "react";
+import CustomPortableText from "../utils/CustomPortableText";
 
 interface IProps {
   data: ICardListTwoItem;
@@ -24,9 +25,11 @@ const CardListTwoItem = ({ data: { description, image, title } }: IProps) => {
         </div>
       )}
       <h3 className="font-lg font-semibold pt-3">{title && title}</h3>
-      <p className="text-gray whitespace-pre-wrap">
-        {description && description}
-      </p>
+      <div>
+        {description && (
+          <CustomPortableText textContent={description} darkMode={false} />
+        )}
+      </div>
     </div>
   );
 };

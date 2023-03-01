@@ -35,7 +35,7 @@ export const cardListItemTwo = defineType({
       title: "Title",
     }),
     defineField({
-      type: "text",
+      type: "blockContent",
       name: "description",
       title: "Description",
     }),

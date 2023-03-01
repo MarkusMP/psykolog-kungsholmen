@@ -30,7 +30,7 @@ module.exports = {
       background: "#fff",
       gray: "#6A6A6A",
       yellow: "#F3C00A",
-      hyperlink: "#0000FF",
+      yellow_accent: "#f8d96c",
     },
     container: {
       screens: {
@@ -40,5 +40,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

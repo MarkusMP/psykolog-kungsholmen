@@ -6,6 +6,7 @@ import React from "react";
 import { CgPin } from "react-icons/cg";
 import { useInView } from "react-intersection-observer";
 import Map from "../Map";
+import CustomPortableText from "../utils/CustomPortableText";
 
 const Cta = ({
   btnText,
@@ -36,7 +37,11 @@ const Cta = ({
           <h2 className="pb-2 text-3xl text-white font-semibold montserrat">
             {title && title}
           </h2>
-          <p className="text-white pb-6">{description && description}</p>
+          <div className="pb-6">
+            {description && (
+              <CustomPortableText textContent={description} darkMode={true} />
+            )}
+          </div>
           {btnText && (
             <Link
               className="montserrat text-center block max-w-fit rounded-full bg-primary_accent px-9 py-[14px] tracking-wider hover:bg-secondary_accent text-white transition-colors"

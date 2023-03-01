@@ -9,6 +9,7 @@ import {
   cardListItem,
   testimonials,
   cardListItemTwo,
+  blockContent,
 } from "./other";
 import { home, page, notFound } from "./pages";
 import {
@@ -52,5 +53,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     cta,
     heroTwo,
     contact,
+    blockContent,
   ],
 };

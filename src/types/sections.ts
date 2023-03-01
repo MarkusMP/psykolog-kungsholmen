@@ -10,7 +10,7 @@ export interface IHeroPayload {
 
 export interface IFeaturePayload {
   title?: string;
-  description?: string;
+  description?: any[];
   image?: Image;
 }
 
@@ -33,7 +33,7 @@ export interface IContactInfoListItem {
 export interface IFeatureTwoPayload {
   title?: string;
   btnText?: string;
-  description?: string;
+  description?: any[];
   link?: { slug: string };
   titleColor?: string;
 }
@@ -56,7 +56,7 @@ export interface ICardListPayload {
 
 export interface ICardItem {
   title?: string;
-  description?: string;
+  description?: any[];
   _key?: string;
 }
 
@@ -81,14 +81,14 @@ export interface ICardListTwo {
 
 export interface ICardListTwoItem {
   title?: string;
-  description?: string;
+  description?: any[];
   _key?: string;
   image?: Image;
 }
 
 export interface ICtaPayload {
   title?: string;
-  description?: string;
+  description?: any[];
   btnText?: string;
   link?: { slug: string };
   location?: string;

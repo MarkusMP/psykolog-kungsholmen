@@ -5,3 +5,4 @@ export * from "./text";
 export * from "./cardListItem";
 export * from "./testimonials";
 export * from "./cardListItemTwo";
+export * from "./blockContent";
