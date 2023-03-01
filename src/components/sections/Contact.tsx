@@ -97,7 +97,7 @@ const Contact = ({ btnText }: IContactPayload) => {
         <button
           type="submit"
           onSubmit={submitHandler}
-          className="montserrat mt-2 text-center block w-full md:w-1/4 rounded-full bg-primary px-9 py-[14px] tracking-wider text-white transition-colors hover:bg-primary_accent"
+          className="montserrat mt-2 text-center block w-full md:w-1/4 rounded-full bg-primary px-9 py-[14px] tracking-wider text-white transition-colors hover:bg-secondary"
         >
           {btnText && btnText}
         </button>

@@ -27,9 +27,9 @@ const Footer = ({
         enter="transition-opacity duration-[800ms]"
         enterFrom="opacity-0"
         enterTo="opacity-100"
-        className="xl:container py-12 mx-auto px-4 flex flex-col mdl:flex-row justify-between w-full"
+        className="xl:container py-12 mx-auto px-4 flex justify-between flex-col mdl:flex-row w-full"
       >
-        <div className="mr-6 pb-6 mdl:pb-0">
+        <div className="mr-3 pb-6 mdl:pb-0 ">
           <div className={`flex items-center lg:w-auto`}>
             <Link href={"/"}>
               <Image
@@ -41,23 +41,40 @@ const Footer = ({
             </Link>
           </div>
           {description && (
-            <p className="max-w-sm text-gray pt-4">{description}</p>
+            <p className="max-w-md text-gray pt-4">{description}</p>
           )}
           <ul className="pt-6">
             {info &&
               info.map((item) => (
                 <li key={item._key} className="pb-1 flex items-center">
                   {item.infoList === "email" ? (
-                    <MdOutlineEmail className="text-lg text-primary min-w-[18px]" />
+                    <>
+                      <MdOutlineEmail className="text-lg text-primary min-w-[18px]" />
+                      <a
+                        className="text-dark ml-1 overflow-anywhere text-secondary hover:text-primary transition-colors"
+                        href={`mailto:${item.text && item.text}`}
+                      >
+                        {item.text && item.text}
+                      </a>
+                    </>
                   ) : item.infoList === "location" ? (
-                    <MdLocationOn className="text-lg text-primary min-w-[18px]" />
+                    <>
+                      <MdLocationOn className="text-lg text-primary min-w-[18px]" />
+                      <p className="text-dark ml-1 overflow-anywhere">
+                        {item.text && item.text}
+                      </p>
+                    </>
                   ) : item.infoList === "number" ? (
-                    <MdPhone className="text-lg text-primary min-w-[18px]" />
+                    <>
+                      <MdPhone className="text-lg text-primary min-w-[18px]" />
+                      <a
+                        className="text-dark ml-1 overflow-anywhere text-secondary hover:text-primary transition-colors"
+                        href={`tel:${item.text && item.text}`}
+                      >
+                        {item.text && item.text}
+                      </a>
+                    </>
                   ) : null}
-
-                  <a className="text-dark ml-1 overflow-anywhere">
-                    {item.text && item.text}
-                  </a>
                 </li>
               ))}
           </ul>
@@ -97,7 +114,8 @@ const Footer = ({
             ))}
         </div>
       </Transition>
-      <div className="mx-auto py-6 border-t-[1px] border-primary xl:container px-4">
+
+      <div className="mx-auto py-6 border-t-[1px] border-primary xl:container">
         <p className="text-center text-dark">
           {copyright && copyright} - Byggt av{" "}
           <a

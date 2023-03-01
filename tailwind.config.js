@@ -22,13 +22,15 @@ module.exports = {
     colors: {
       transparent: "transparent",
       primary: "#043C2C",
-      primary_accent: "#00BE6E",
-      secondary: "#008c51",
+      primary_accent: "#0DC28E",
+      secondary: "#087556",
+      secondary_accent: "#0A9C72",
       dark: "#1E1E1E",
       white: "#ffffff",
       background: "#fff",
       gray: "#6A6A6A",
       yellow: "#F3C00A",
+      hyperlink: "#0000FF",
     },
     container: {
       screens: {

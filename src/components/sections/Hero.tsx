@@ -27,7 +27,7 @@ const Hero = ({ btnText, description, image, link, title }: IHeroPayload) => {
           </p>
           {btnText && (
             <Link
-              className="montserrat text-center block max-w-fit rounded-full bg-primary px-9 py-[14px] tracking-wider text-white transition-colors hover:bg-primary_accent"
+              className="montserrat text-center block max-w-fit rounded-full bg-primary px-9 py-[14px] tracking-wider text-white transition-colors hover:bg-secondary"
               href={link?.slug ? `${link.slug}` : "/"}
             >
               {btnText && btnText}

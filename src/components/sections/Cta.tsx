@@ -39,7 +39,7 @@ const Cta = ({
           <p className="text-white pb-6">{description && description}</p>
           {btnText && (
             <Link
-              className="montserrat text-center block max-w-fit rounded-full bg-primary_accent hover:bg-secondary px-9 py-[14px] tracking-wider text-white transition-colors"
+              className="montserrat text-center block max-w-fit rounded-full bg-primary_accent px-9 py-[14px] tracking-wider hover:bg-secondary_accent text-white transition-colors"
               href={link?.slug ? `${link.slug}` : "/"}
             >
               {btnText && btnText}
