@@ -1,11 +1,10 @@
 import { PagePreview } from "@/sanity/preview/PagePreview";
 import {
   DocumentIcon,
-  ErrorOutlineIcon,
+  UnknownIcon,
   HeartIcon,
   HomeIcon,
   MenuIcon,
-  UnknownIcon,
   UploadIcon,
 } from "@sanity/icons";
 import { definePlugin, DocumentOptions, DocumentPluginOptions } from "sanity";
@@ -48,7 +47,7 @@ export const deskTool = definePlugin(() => {
             ),
           S.listItem()
             .title("404 Page")
-            .icon(ErrorOutlineIcon)
+            .icon(UnknownIcon)
             .child(
               S.document()
                 .schemaType("notFound")

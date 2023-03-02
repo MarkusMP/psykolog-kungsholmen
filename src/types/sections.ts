@@ -103,3 +103,8 @@ export interface IHeroTwo {
 export interface IContactPayload {
   btnText?: string;
 }
+
+export interface INotFoundSectionPayload {
+  title?: string;
+  description?: string;
+}

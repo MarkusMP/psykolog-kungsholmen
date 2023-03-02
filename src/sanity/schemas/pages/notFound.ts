@@ -1,4 +1,3 @@
-import { ErrorOutlineIcon } from "@sanity/icons";
 import { defineField, defineType, isRecord, isString } from "sanity";
 
 import { previewSecretId } from "@/sanity/constants";
@@ -12,12 +11,13 @@ import {
   CustomFieldTitle,
   InputCounterTitle,
 } from "@/sanity/components/InputCounterTitle";
+import { UnknownIcon } from "@sanity/icons";
 
 export const notFound = defineType({
   type: "document",
   name: "notFound",
   title: "404",
-  icon: ErrorOutlineIcon,
+  icon: UnknownIcon,
 
   options: {
     async url(ctx: any) {
@@ -57,6 +57,12 @@ export const notFound = defineType({
       title: "Title for menu & links",
       description:
         "💡 This won't show up for users, just make sure you add a descriptive name which will make it easy to find this page later when adding links or searching & browsing the CMS.",
+    }),
+    defineField({
+      name: "content",
+      type: "array",
+      title: "Content / body of the page",
+      of: [{ type: "notFoundSection" }],
     }),
     defineField({
       title: "Title for SEO & social sharing",

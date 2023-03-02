@@ -23,6 +23,7 @@ import {
   hero,
   heroTwo,
   infoSidebar,
+  notFoundSection,
   sideBarInfoAndContent,
   testimonialsCarousel,
 } from "./sections";
@@ -54,5 +55,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     heroTwo,
     contact,
     blockContent,
+    notFoundSection,
   ],
 };
