@@ -61,6 +61,7 @@ const Header = ({ data: { image, menuItems } }: IProps) => {
               width={200}
               height={60}
               alt={image?.alt || ""}
+              sizes="(max-width: 200px) 200px"
             />
           </Link>
         </div>

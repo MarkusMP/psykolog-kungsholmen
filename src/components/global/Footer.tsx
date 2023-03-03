@@ -37,6 +37,7 @@ const Footer = ({
                 width={250}
                 height={40}
                 alt={image?.alt || ""}
+                sizes="(max-width: 250px) 250px"
               />
             </Link>
           </div>

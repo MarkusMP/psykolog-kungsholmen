@@ -130,6 +130,7 @@ const TestimonialsCarousel = ({
               return (
                 <button
                   key={idx}
+                  aria-label={`Visa Testimonial ${idx + 1}`}
                   onClick={() => {
                     instanceRef.current?.moveToIdx(idx * view);
                   }}
