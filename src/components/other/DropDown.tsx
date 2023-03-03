@@ -24,13 +24,17 @@ const DropDown = ({ items, title }: IProps) => {
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
+        enterFrom="transform opacity-10 scale-95"
         enterTo="transform opacity-100 scale-100"
         leave="transition ease-in duration-75"
         leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
+        unmount={false}
+        leaveTo="transform opacity-10 scale-95"
       >
-        <Menu.Items className="relative lg:absolute right-0 lg:mt-2 w-64 origin-top-right divide-y divide-primary rounded-md bg-transparent lg:bg-white lg:shadow-lg lg:ring-1 ring-primary ring-opacity-5">
+        <Menu.Items
+          unmount={false}
+          className="relative lg:absolute right-0 lg:mt-2 w-64 origin-top-right divide-y divide-primary rounded-md bg-transparent lg:bg-white lg:shadow-lg lg:ring-1 ring-primary ring-opacity-5"
+        >
           <div className="lg:p-2">
             {items &&
               items.map((item) => (

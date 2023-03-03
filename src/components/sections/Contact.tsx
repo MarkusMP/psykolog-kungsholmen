@@ -23,9 +23,10 @@ const Contact = ({ btnText }: IContactPayload) => {
         show={inView}
         as="form"
         enter="transition-opacity duration-[800ms]"
-        enterFrom="opacity-0"
+        enterFrom="opacity-10"
         enterTo="opacity-100"
         className="w-full"
+        unmount={false}
         onSubmit={submitHandler}
       >
         <div className="flex flex-col pb-4">

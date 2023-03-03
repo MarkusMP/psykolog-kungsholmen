@@ -101,6 +101,7 @@ export const page = defineType({
         { type: "feature" },
         { type: "sideBarInfoAndContent" },
         { type: "cta" },
+        { type: "textContent" },
       ],
     }),
     defineField({

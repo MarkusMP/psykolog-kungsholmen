@@ -26,6 +26,7 @@ import {
   notFoundSection,
   sideBarInfoAndContent,
   testimonialsCarousel,
+  textContent,
 } from "./sections";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -56,5 +57,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     contact,
     blockContent,
     notFoundSection,
+    textContent,
   ],
 };

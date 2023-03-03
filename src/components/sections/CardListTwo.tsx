@@ -15,9 +15,10 @@ const CardListTwo = ({ description, list, title }: ICardListTwo) => {
         show={inView}
         as="div"
         enter="transition-opacity duration-[800ms]"
-        enterFrom="opacity-0"
+        enterFrom="opacity-10"
         enterTo="opacity-100"
         className="max-w-full"
+        unmount={false}
       >
         <h2 className="text-xl sm:text-2xl text-dark font-bold montserrat pb-2 md:max-w-[75%]">
           {title && title}

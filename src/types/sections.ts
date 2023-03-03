@@ -108,3 +108,7 @@ export interface INotFoundSectionPayload {
   title?: string;
   description?: string;
 }
+
+export interface ItextContentPayload {
+  content?: any;
+}

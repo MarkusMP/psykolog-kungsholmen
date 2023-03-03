@@ -15,8 +15,9 @@ const CardList = ({ list, description, title }: ICardListPayload) => {
         show={inView}
         as="div"
         enter="transition-opacity duration-[800ms]"
-        enterFrom="opacity-0"
+        enterFrom="opacity-10"
         enterTo="opacity-100"
+        unmount={false}
         className="max-w-full"
       >
         <h2 className="text-xl sm:text-2xl text-dark font-bold montserrat pb-2 md:max-w-[75%]">

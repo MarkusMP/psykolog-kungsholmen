@@ -11,3 +11,4 @@ export * from "./cta";
 export * from "./HeroTwo";
 export * from "./contact";
 export * from "./notFoundSection";
+export * from "./textContent";

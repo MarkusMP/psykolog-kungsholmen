@@ -10,3 +10,4 @@ export { default as Cta } from "./Cta";
 export { default as HeroTwo } from "./HeroTwo";
 export { default as Contact } from "./Contact";
 export { default as NotFoundSection } from "./NotFoundSection";
+export { default as TextContent } from "./TextContent";

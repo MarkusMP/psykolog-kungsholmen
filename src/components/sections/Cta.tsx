@@ -30,8 +30,9 @@ const Cta = ({
           show={inView}
           as="div"
           enter="transition-opacity duration-[800ms]"
-          enterFrom="opacity-0"
+          enterFrom="opacity-10"
           enterTo="opacity-100"
+          unmount={false}
           className="order-2 mdl:order-1 w-full pt-6 mdl:pt-0 lg:w-1/2 xl:w-6/12 md:pr-2 lg:max-w-[585px]"
         >
           <h2 className="pb-2 text-3xl text-white font-semibold montserrat">

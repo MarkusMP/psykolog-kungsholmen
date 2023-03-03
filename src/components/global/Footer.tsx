@@ -24,8 +24,9 @@ const Footer = ({
       <Transition
         show={inView}
         as="div"
+        unmount={false}
         enter="transition-opacity duration-[800ms]"
-        enterFrom="opacity-0"
+        enterFrom="opacity-10"
         enterTo="opacity-100"
         className="xl:container py-12 mx-auto px-4 flex justify-between flex-col mdl:flex-row w-full"
       >

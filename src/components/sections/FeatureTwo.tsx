@@ -23,8 +23,9 @@ const FeatureTwo = ({
         show={inView}
         as="div"
         enter="transition-opacity duration-[800ms]"
-        enterFrom="opacity-0"
+        enterFrom="opacity-10"
         enterTo="opacity-100"
+        unmount={false}
       >
         <h2 className="text-xl sm:text-2xl text-dark font-bold montserrat">
           {title && title}

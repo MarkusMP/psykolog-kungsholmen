@@ -74,13 +74,12 @@ const Header = ({ data: { image, menuItems } }: IProps) => {
           as="ul"
           show={open}
           enter="transition-all duration-300"
-          enterFrom="top-[-200%] lg:top-0 opacity-0 lg:opacity-100"
+          enterFrom="top-[-200%] lg:top-0 opacity-10 lg:opacity-100"
           enterTo="top-[80px] lg:top-0 opacity-100"
+          unmount={false}
           className={`${
             open ? "flex" : "hidden"
-          } flex-col lg:flex-row absolute lg:relative lg:top-0 text-left z-[0] lg:z-[2] ${
-            width < 1024 && "opacity-0"
-          } items-left lg:items-center w-full left-0 lg:w-auto px-4 lg:px-0 bg-white`}
+          } flex-col lg:flex-row absolute lg:relative lg:top-0 text-left z-[0] lg:z-[2]  items-left lg:items-center w-full left-0 lg:w-auto px-4 lg:px-0 bg-white`}
         >
           {menuItems &&
             menuItems.map((item) => (
