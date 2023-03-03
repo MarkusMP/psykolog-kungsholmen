@@ -22,12 +22,12 @@ const Feature = ({ description, image, title }: IFeaturePayload) => {
             <CustomPortableText textContent={description} darkMode={true} />
           )}
         </div>
-        <div className="order-1 mdl:order-2 w-full lg:w-1/2 xl:w-6/12 md:pl-2 flex justify-end">
+        <div className="order-1 mdl:order-2 w-full lg:w-1/2 xl:w-6/12 md:pl-2 flex justify-center">
           {imageUrl && (
             <Image
               src={imageUrl as any}
-              width={610}
-              height={410}
+              width={710}
+              height={510}
               alt={image?.alt || ""}
               className="rounded-[20px]"
             />

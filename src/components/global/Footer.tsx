@@ -116,18 +116,20 @@ const Footer = ({
         </div>
       </Transition>
 
-      <div className="mx-auto py-6 border-t-[1px] border-primary xl:container">
-        <p className="text-center text-dark">
-          {copyright && copyright} - Byggt av{" "}
-          <a
-            href="https://webbtopia.com/sv"
-            className="cursor-pointer underline text-dark"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Webbtopia
-          </a>
-        </p>
+      <div className="mx-4">
+        <div className="mx-auto py-6 border-t-[1px] border-primary xl:container">
+          <p className="text-center text-dark">
+            {copyright && copyright} - Byggt av{" "}
+            <a
+              href="https://webbtopia.com/sv"
+              className="cursor-pointer underline text-dark"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Webbtopia
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
